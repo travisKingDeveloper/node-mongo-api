@@ -1,7 +1,6 @@
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
-const http = require('http')
 const logging = require('./logging')
 
 const app = express()
@@ -56,8 +55,6 @@ app.get('/*', function(req, res){
     res.json({ all: 'good' })
 })
 
-const server = http.createServer(app)
-
-server.listen(PORT, function() {
+app.listen(PORT, function() {
     logger.info(`listening on this port ${PORT}`)
 })
