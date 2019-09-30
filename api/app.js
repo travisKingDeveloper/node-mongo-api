@@ -5,7 +5,7 @@ const http = require('http')
 const logging = require('./logging')
 
 const app = express()
-const PORT = process.env.port || 3000
+const PORT = process.env.port || 3001
 const logger = logging.createLogger('global')
 
 // log global unhandled errors
@@ -25,6 +25,31 @@ app.use(logging.createErrLogger('request'))
 
 app.get('/health', function(req, res) {
     res.json({ allGood: 'partner' })
+})
+
+app.get('/tables', function(req, res) {
+    const tables  = [
+        {
+            name: 'mahoganey',
+            legs: '4',
+            seats: '8',
+            price: 400,
+        },
+        {
+            name: 'elm',
+            legs: '4',
+            seats: '8',
+            price: 300,
+        },
+        {
+            name: 'oak',
+            legs: '4',
+            seats: '4',
+            price: 100,
+        }
+    ]
+
+    res.json(tables)
 })
 
 app.get('/*', function(req, res){
