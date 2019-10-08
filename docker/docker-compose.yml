@@ -13,3 +13,12 @@ services:
       restart: on-failure
       ports:
         - "3000:80"
+    demophon-mongo:
+      image: mongo
+      ports:
+      - "27017:27017"
+      volumes:
+      - data-volume:/data/db
+
+volumes:
+  data-volume:
