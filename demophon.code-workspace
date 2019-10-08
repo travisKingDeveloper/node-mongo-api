@@ -1,7 +1,23 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
+			"name": "~"
+		},
+		{
+			"path": "api"
+		},
+		{
+			"path": "docker"
+		},
+		{
+			"path": "mongo"
+		},
+		{
+			"path": "scripts"
+		},
+		{
+			"path": "web"
 		}
 	],
 	"settings": {}

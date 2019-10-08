@@ -4,7 +4,8 @@
   "description": "Sample Api that connects to mongo (runs in docker)",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",
